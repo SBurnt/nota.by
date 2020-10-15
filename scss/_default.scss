@@ -1,0 +1,65 @@
+.brief {
+  padding: 0;
+}
+
+.section {
+  &__inner {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: left;
+    color: $dark2;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    line-height: 120%;
+    color: $dark2;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+
+      font-size: 16px;
+    }
+  }
+}
+
+.brief__btn {
+  height: 44px;
+  padding: 15px 25px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $gold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: $gold-hover;
+  }
+
+  &:focus {
+    background-color: $gold-hover;
+  }
+}

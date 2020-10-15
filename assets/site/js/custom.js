@@ -1,14 +1,8 @@
-console.log('work');
-
-//$('.slick-container').slick();
-
-/*$(document).ready(function () {
-  var galleryTop = new Swiper(".gallery__content-swiper", {
-      spaceBetween: 10,
-      loop:true,
-      centeredSlides: true,
-      loopedSlides: 20,
-      slidesPerView:'auto'
-    })
-  });
-*/
+const sliderAbout = document.querySelector('.js-about-slider');
+let swiper = new Swiper(sliderAbout, {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next.slider__arrows-next',
+    prevEl: '.swiper-button-prev.slider__arrows-prev',
+  },
+});
