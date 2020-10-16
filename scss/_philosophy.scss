@@ -1,0 +1,133 @@
+.brief .philosophy {
+  .section__inner {
+    display: flex;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    width: 41.7%;
+
+    @media (max-width: 1024px) {
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__right {
+    width: 58.3%;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 320px;
+
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 120%;
+    color: $dark2;
+
+    @media (max-width: 1024px) {
+      max-width: none;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 300px;
+
+      font-size: 32px;
+    }
+
+    span {
+      color: $gold;
+    }
+  }
+
+  &__motto {
+    display: block;
+    width: 100%;
+    max-width: 625px;
+    margin-bottom: 65px;
+
+    font-size: 24px;
+    line-height: 120%;
+    color: $dark2;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    counter-reset: section;
+
+    @media (max-width: 1024px) {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    padding-left: 85px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 52px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item::before {
+    content: '0' counter(section) ' ';
+    position: absolute;
+    left: 0;
+
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 100%;
+    color: $gold;
+
+    counter-increment: section;
+  }
+
+  &__item-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: $dark2;
+  }
+}
