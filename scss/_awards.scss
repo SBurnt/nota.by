@@ -1,4 +1,4 @@
-.brief .philosophy {
+.brief .awards {
   .section__inner {
     display: flex;
 
@@ -34,19 +34,23 @@
   &__title {
     width: 100%;
     max-width: 320px;
+    padding-top: 0;
 
     font-weight: bold;
     font-size: 48px;
     line-height: 120%;
+    text-align: left;
     color: $dark2;
     text-transform: uppercase;
+
+    opacity: 1;
 
     @media (max-width: 1024px) {
       max-width: none;
     }
 
     @media (max-width: 768px) {
-      max-width: 300px;
+      max-width: 240px;
 
       font-size: 32px;
     }
@@ -59,7 +63,7 @@
   &__motto {
     display: block;
     width: 100%;
-    max-width: 625px;
+    max-width: 500px;
     margin-bottom: 65px;
 
     font-size: 24px;
@@ -71,64 +75,88 @@
     }
 
     @media (max-width: 768px) {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
 
       font-size: 18px;
     }
   }
 
   &__list {
-    margin: 0;
-    padding: 0;
+    position: relative;
 
-    counter-reset: section;
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0 73px;
 
     @media (max-width: 1024px) {
-      display: flex;
     }
 
     @media (max-width: 768px) {
-      display: block;
+      padding: 0 34px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+
+      width: 43px;
+      height: 112px;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+
+      @media (max-width: 768px) {
+        width: 20px;
+        height: 53px;
+      }
+    }
+
+    &::before {
+      left: 0;
+
+      background-image: url(assets/templates/index_new/img/brief-page/awards/wreath-left.png);
+    }
+
+    &::after {
+      right: 0;
+
+      background-image: url(assets/templates/index_new/img/brief-page/awards/wreath-right.png);
     }
   }
 
   &__item {
-    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 185px;
+    height: 70px;
+    // position: relative;
 
-    display: flex;
-    align-items: center;
-    padding-left: 85px;
+    // display: flex;
+    // align-items: center;
+    // padding-left: 85px;
+
+    @media (max-width: 768px) {
+      max-width: 87px;
+      height: 33px;
+    }
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 52px;
+    margin-right: 20px;
 
     @media (max-width: 1024px) {
-      margin-bottom: 0;
     }
 
     @media (max-width: 768px) {
-      margin-bottom: 20px;
+      margin-right: 9px;
     }
   }
 
-  &__item::before {
-    content: '0' counter(section) ' ';
-    position: absolute;
-    left: 0;
-
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 100%;
-    color: $gold;
-
-    counter-increment: section;
-  }
-
-  &__item-text {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 120%;
-    color: $dark2;
+  &__item-img {
+    height: 100%;
   }
 }
