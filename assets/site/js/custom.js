@@ -6,3 +6,26 @@ let swiper = new Swiper(sliderAbout, {
     prevEl: '.swiper-button-prev.slider__arrows-prev',
   },
 });
+
+const sliderOurTeam = document.querySelector('.js-our-team-slider');
+let swiper2 = new Swiper(sliderOurTeam, {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: '.our-team .swiper-button-next',
+    prevEl: '.our-team .swiper-button-prev',
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      centeredSlides: false,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
+});
