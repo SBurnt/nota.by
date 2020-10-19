@@ -1,4 +1,13 @@
 .brief .awards {
+  @media (max-width: 425px) {
+    position: static;
+
+    margin-bottom: initial;
+    padding-top: initial;
+
+    background: initial;
+  }
+
   .section__inner {
     display: flex;
 
@@ -118,13 +127,13 @@
     &::before {
       left: 0;
 
-      background-image: url(assets/templates/index_new/img/brief-page/awards/wreath-left.png);
+      background-image: url(../img/brief-page/awards/wreath-left.png);
     }
 
     &::after {
       right: 0;
 
-      background-image: url(assets/templates/index_new/img/brief-page/awards/wreath-right.png);
+      background-image: url(../img/brief-page/awards/wreath-right.png);
     }
   }
 
