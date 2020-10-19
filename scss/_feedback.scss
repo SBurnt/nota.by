@@ -1,0 +1,38 @@
+.brief .feedback {
+  margin-top: initial;
+  padding-bottom: initial;
+
+  .section__inner {
+    padding-right: 105px;
+    padding-left: 105px;
+
+    @media (max-width: 1024px) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__title__smile {
+    width: 35px;
+    height: 35px;
+  }
+
+  &__item__link {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    color: $dark2;
+  }
+
+  &__item__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  &__cost {
+    &.section__title {
+      margin-bottom: 0;
+    }
+  }
+}
