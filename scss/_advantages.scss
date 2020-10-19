@@ -56,6 +56,10 @@
     @media (max-width: 1024px) {
       width: 100%;
       min-height: 155px;
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
     }
 
     @media (max-width: 768px) {
@@ -74,6 +78,13 @@
       .advantages__img-wrap {
         width: 300px;
       }
+    }
+  }
+
+  &__item--visible {
+    @media (max-width: 1024px) {
+      display: block !important;
+      // display: none;
     }
   }
 
@@ -144,6 +155,21 @@
 
     @media (max-width: 768px) {
       max-width: 332px;
+    }
+  }
+
+  &__btn-more {
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    color: $dark2;
+
+    background-color: transparent;
+    border: 1px solid $dark2;
+
+    @media (max-width: 1024px) {
+      display: block;
     }
   }
 
