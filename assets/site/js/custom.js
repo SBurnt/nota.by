@@ -29,3 +29,25 @@ let swiper2 = new Swiper(sliderOurTeam, {
     },
   },
 });
+
+const sliderReviews = document.querySelector('.js-reviews-slider');
+let swiper3 = new Swiper(sliderReviews, {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  // centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: '.reviews .swiper-button-next',
+    prevEl: '.reviews .swiper-button-prev',
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    // 768: {
+    //   slidesPerView: 1,
+    //   spaceBetween: 10,
+    // },
+  },
+});
