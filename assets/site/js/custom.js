@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  // Browser compatibility ie11 (forEach)
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (let i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
+
   // главный слайдер на странице brief
   const sliderAbout = document.querySelector('.js-about-slider');
   let swiper = new Swiper(sliderAbout, {
