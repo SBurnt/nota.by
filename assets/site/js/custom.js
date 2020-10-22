@@ -178,4 +178,15 @@ $(document).ready(function () {
     });
   }
   // прохождение квиза END
+
+  // переход к квизу по якорю START
+  $('a[href^="#quiz"], *[data-href^="#quiz"]').on('click', function (e) {
+    e.preventDefault();
+    var t = 1000;
+    var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+    $('html,body')
+      .stop()
+      .animate({ scrollTop: $(d).offset().top }, t);
+  });
+  // переход к квизу по якорю END
 });
