@@ -177,3 +177,22 @@
     background: $dark2;
   }
 }
+
+body[data-theme='night'] .brief .advantages {
+  background: $dark2;
+  .section__title,
+  .section__subtitle,
+  .advantages__text {
+    color: $night-theme;
+  }
+
+  .advantages__item {
+    background: #1f2022;
+  }
+
+  .advantages__btn {
+    color: $dark2;
+
+    background: $night-theme;
+  }
+}

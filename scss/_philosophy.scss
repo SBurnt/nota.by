@@ -132,3 +132,11 @@
     color: $dark2;
   }
 }
+
+body[data-theme='night'] .brief .philosophy {
+  .philosophy__title,
+  .philosophy__motto,
+  .philosophy__item-text {
+    color: $night-theme;
+  }
+}

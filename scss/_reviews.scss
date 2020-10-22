@@ -132,3 +132,18 @@
     }
   }
 }
+
+body[data-theme='night'] .brief .reviews {
+  .section__title,
+  .section__subtitle,
+  .reviews__card-position,
+  .reviews__card-text {
+    color: $night-theme;
+  }
+
+  .reviews__card-text-wrap {
+    background: $dark2;
+    box-shadow: 20px 20px 0 0 #121212;
+    border-color: $dark2;
+  }
+}

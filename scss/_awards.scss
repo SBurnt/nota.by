@@ -105,9 +105,13 @@
       padding: 0 34px;
     }
 
+    &.night {
+      display: none;
+    }
+
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
 
@@ -167,5 +171,28 @@
 
   &__item-img {
     height: 100%;
+  }
+}
+
+body[data-theme="night"] .brief .awards {
+  .awards__title,
+  .awards__motto {
+    color: $night-theme;
+  }
+
+  .awards__list {
+    display: none;
+  }
+
+  .awards__list.night {
+    display: flex;
+  }
+
+  .awards__list::before {
+    background-image: url(../img/brief-page/awards/wreath-left-night.png);
+  }
+
+  .awards__list::after {
+    background-image: url(../img/brief-page/awards/wreath-right-night.png);
   }
 }

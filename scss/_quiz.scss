@@ -453,11 +453,12 @@
 
   &__btn-prev,
   &__btn-next {
+    min-width: 181px;
+
     color: $dark2;
 
     background-color: transparent;
     border: 1px solid $dark2;
-    min-width: 181px;
   }
 
   &__btn-prev {
@@ -472,5 +473,35 @@
   &__btn-send {
     display: none;
     align-self: flex-start;
+  }
+}
+
+body[data-theme='night'] .brief .quiz {
+  background-color: initial;
+  &__content {
+    background-color: #1f2022;
+  }
+
+  .section__title,
+  .section__subtitle,
+  .question__title,
+  .question__subtitle,
+  .answer__title,
+  .answer__subtitle,
+  .quiz__btn-next,
+  .quiz__btn-prev,
+  .answer__type-service-title,
+  .answer__input-contacts,
+  .answer__title-contact,
+  .answer__title-file,
+  .answer__input-file-text {
+    color: $night-theme;
+  }
+
+  .quiz__btn-next,
+  .quiz__btn-prev,
+  .answer__input-contacts,
+  .answer__input-file-text {
+    border-color: $night-theme;
   }
 }

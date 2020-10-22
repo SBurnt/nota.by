@@ -72,3 +72,34 @@
     background-color: $gold-hover;
   }
 }
+
+.footer__logo.night {
+  display: none;
+}
+
+body[data-theme='night'].brief-footer .footer {
+  background-color: $dark2;
+  .social__list__item__link svg {
+    fill: $night-theme;
+  }
+
+  .social__list__item__link__name,
+  .footer__contact__mail,
+  .footer__contact__phone,
+  .footer__menu__item,
+  .footer__copyright {
+    color: $night-theme;
+  }
+
+  .footer__copyright {
+    opacity: 1;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer__logo.night {
+    display: block;
+  }
+}

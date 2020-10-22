@@ -36,3 +36,9 @@
     }
   }
 }
+
+body[data-theme='night'] .brief .feedback {
+  .section__title {
+    color: $night-theme;
+  }
+}

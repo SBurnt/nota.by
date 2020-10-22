@@ -4,7 +4,7 @@
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -210,5 +210,16 @@
 
       background-color: $white;
     }
+  }
+}
+
+body[data-theme="night"] .brief .our-team {
+  .section__title,
+  .our-team__card-position {
+    color: $night-theme;
+  }
+
+  .our-team__card-info {
+    background: #1f2022;
   }
 }
