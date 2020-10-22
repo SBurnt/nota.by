@@ -120,4 +120,62 @@ $(document).ready(function () {
     });
   });
   // появление инфомации о человеке секции наша команда на странице brief END
+
+  if ($('.tabs__item').length) {
+    servicesTenTabs();
+  }
+
+  // прохождение квиза START
+  function servicesTenTabs() {
+    $('.tabs__item').on('click', function () {
+      var attrID = $(this).find('div.tabs__text').attr('data-tab');
+
+      $(this).closest('.quiz__wrap').find('.tabs__item, .content__item').removeClass('active');
+
+      $(this)
+        .addClass('active')
+        .closest('.quiz__wrap')
+        .find('.content__item[data-id="' + attrID + '"]')
+        .addClass('active');
+
+      if (attrID == 'tab4') {
+        $('.quiz__btn-wrap').css('display', 'none');
+        $('.quiz__btn-send').css('display', 'inline-block');
+      } else {
+        $('.quiz__btn-wrap').css('display', 'block');
+        $('.quiz__btn-send').css('display', 'none');
+      }
+
+      if (attrID == 'tab1') {
+        $('.quiz__btn-prev').css('display', 'none');
+      } else {
+        $('.quiz__btn-prev').css('display', 'inline-block');
+      }
+
+      $(this).addClass('question__answered');
+    });
+
+    $('.quiz__btn-next').on('click', function () {
+      var tabs = $(this).closest('.quiz__wrap').find('.tabs__item');
+      var currentIndex = tabs.index($(this).closest('.quiz__wrap').find('.tabs__item.active'));
+
+      if (currentIndex === tabs.length - 1) {
+        $(tabs[0]).trigger('click');
+      } else {
+        $(tabs[currentIndex + 1]).trigger('click');
+      }
+    });
+
+    $('.quiz__btn-prev').on('click', function () {
+      var tabs = $(this).closest('.quiz__wrap').find('.tabs__item');
+      var currentIndex = tabs.index($(this).closest('.quiz__wrap').find('.tabs__item.active'));
+
+      if (!currentIndex) {
+        $(tabs[$tabs.length - 1]).trigger('click');
+      } else {
+        $(tabs[currentIndex - 1]).trigger('click');
+      }
+    });
+  }
+  // прохождение квиза END
 });

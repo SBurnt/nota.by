@@ -639,6 +639,303 @@
         </div>
       </div>
     </section>
+    <section class="quiz">
+      <div class="container-new">
+        <div class="section__inner">
+          <h1 class="section__title">Чтобы рассчитать стоимость вашего проекта - заполните бриф</h1>
+          <p class="section__subtitle">Мы составим предварительное техническое задание и рассчитаем примерную стоимость
+            вашего проекта.</p>
+          <div class="quiz__wrap">
+            <div class="quiz__tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item active question__answered">
+                  <div class="tabs__num">1</div>
+                  <div class="tabs__text" data-tab="tab1">
+                    <span class="tabs__title">Первый шаг</span>
+                    <span class="tabs__subtitle">Данные о проекте</span>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__num">2</div>
+                  <div class="tabs__text" data-tab="tab2">
+                    <span class="tabs__title">Второй шаг</span>
+                    <span class="tabs__subtitle">Вид услуги</span>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__num">3</div>
+                  <div class="tabs__text" data-tab="tab3">
+                    <span class="tabs__title">Третий шаг</span>
+                    <span class="tabs__subtitle">Метраж объекта</span>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__num">4</div>
+                  <div class="tabs__text" data-tab="tab4">
+                    <span class="tabs__title">Четвертый шаг</span>
+                    <span class="tabs__subtitle">Контактные данные</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="discount">
+                <div class="discount__text">С каждым ответом растет <span>Ваша скидка</span></div>
+                <div class="discount__percent">+<span class="discount__num">2</span>%</div>
+              </div>
+            </div>
+            <div class="quiz__content">
+              <form class="content__form" action="">
+                <div class="content__item active" data-id='tab1'>
+                  <div class="question__wrap">
+                    <div class="question__title">Какую задачу решает проект? *</div>
+                    <span class="question__subtitle">Обязательно для заполнения</span>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="project-task" id="" value="Для жизни" checked>
+                      <div class="answer__text">
+                        <span class="answer__title">Для жизни</span>
+                        <span class="answer__subtitle">Жилые здания, экстерьер, проектирование</span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="project-task" id="" value="Для бизнеса">
+                      <div class="answer__text">
+                        <span class="answer__title">Для бизнеса</span>
+                        <span class="answer__subtitle">Коммерческие интерьеры, жилые комлексы, ритейл-дизайн</span>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="question__wrap">
+                    <div class="question__title">Тип объекта</div>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-type" id="" value="Квартира">
+                      <div class="answer__text">
+                        <span class="answer__title">Квартира</span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-type" id="" value="Дом">
+                      <div class="answer__text">
+                        <span class="answer__title">Дом</span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-type" id="" value="Другое">
+                      <div class="answer__text">
+                        <span class="answer__title">Другое</span>
+                        <span class="answer__subtitle">Например, баня, навес, гостевой домик</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="content__item" data-id='tab2'>
+                  <div class="question__wrap">
+                    <div class="question__title">Вид услуги</div>
+                    <span class="question__subtitle">Вы можете ознакомиться с подробным описанием услуг
+                      <a class="question__subtitle-link" href="services" target="_blank">здесь</a>
+                    </span>
+                    <div class="answer__types-services-wrap">
+                      <div class="answer__type-service">
+                        <span class="answer__type-service-title">В интерьере:</span>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Планировочное решение, зонирование (концепт-проект)">
+                          <div class="answer__text">
+                            <span class="answer__title">Планировочное решение,<br> зонирование (концепт-проект)</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Дизайн-проект интерьера">
+                          <div class="answer__text">
+                            <span class="answer__title">Дизайн-проект интерьера</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Авторское сопровождение">
+                          <div class="answer__text">
+                            <span class="answer__title">Авторское сопровождение</span>
+                            <span class="answer__subtitle">организация строительного процесса</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Комлектация объекта">
+                          <div class="answer__text">
+                            <span class="answer__title">Комлектация объекта</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Согласование планировочных решений">
+                          <div class="answer__text">
+                            <span class="answer__title">Согласование планировочных решений</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Декорирование интерьера">
+                          <div class="answer__text">
+                            <span class="answer__title">Декорирование интерьера</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Консалтинг, аудит существующих проектных решений">
+                          <div class="answer__text">
+                            <span class="answer__title">Консалтинг, аудит существующих проектных решений</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-interior" id=""
+                            value="Проекты инженерных сетей и систем">
+                          <div class="answer__text">
+                            <span class="answer__title">Проекты инженерных сетей и систем</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="answer__type-service">
+                        <span class="answer__type-service-title">В архитектуре:</span>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Подбор земельного участка">
+                          <div class="answer__text">
+                            <span class="answer__title">Подбор земельного участка</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Эскизный проект">
+                          <div class="answer__text">
+                            <span class="answer__title">Эскизный проект</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Архитектурно-строительные решения">
+                          <div class="answer__text">
+                            <span class="answer__title">Архитектурно-строительные решения</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Проекты инженерных сетей и систем">
+                          <div class="answer__text">
+                            <span class="answer__title">Проекты инженерных сетей и систем</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Благоустройство экстерьера, декоративное оформление                          фасада">
+                          <div class="answer__text">
+                            <span class="answer__title">Благоустройство экстерьера, декоративное оформление
+                              фасада</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Генеральный план и транспорт">
+                          <div class="answer__text">
+                            <span class="answer__title">Генеральный план и транспорт</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Согласование строительства">
+                          <div class="answer__text">
+                            <span class="answer__title">Согласование строительства</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Авторское сопровождение">
+                          <div class="answer__text">
+                            <span class="answer__title">Авторское сопровождение</span>
+                          </div>
+                        </label>
+                        <label class="answer__label">
+                          <input class="answer__input" type="checkbox" name="type-service-architecture" id=""
+                            value="Консалтинг, аудит существующих проектных решений">
+                          <div class="answer__text">
+                            <span class="answer__title">Консалтинг, аудит существующих проектных решений</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content__item" data-id='tab3'>
+                  <div class="question__wrap">
+                    <div class="question__title">Метраж объекта *</div>
+                    <span class="question__subtitle">Обязательно для заполнения</span>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-area" id="" value="До 100 м2" checked>
+                      <div class="answer__text">
+                        <span class="answer__title">До 100 м<sup>2</sup></span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-area" id="" value="До 200 м2">
+                      <div class="answer__text">
+                        <span class="answer__title">До 200 м<sup>2</sup></span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-area" id="" value="До 300 м2">
+                      <div class="answer__text">
+                        <span class="answer__title">До 300 м<sup>2</sup></span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-area" id="" value="До 400 м2">
+                      <div class="answer__text">
+                        <span class="answer__title">До 400 м<sup>2</sup></span>
+                      </div>
+                    </label>
+                    <label class="answer__label">
+                      <input class="answer__input" type="radio" name="object-area" id="" value="Нет информации">
+                      <div class="answer__text">
+                        <span class="answer__title">Нет информации</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="content__item" data-id='tab4'>
+                  <div class="question__title">Контактные данные *</div>
+                  <span class="question__subtitle">Обязательно для заполнения</span>
+                  <div class="question__wrap">
+                    <label class="answer__label-contacts">
+                      <input class="answer__input-contacts" type="text" name="name" id=""
+                        onkeyup="this.setAttribute('value', this.value);" required="" value="">
+                      <span class="answer__title-contact">Ваше имя</span>
+                    </label>
+                    <label class="answer__label-contacts">
+                      <input class="answer__input-contacts" type="tel" inputmode="tel" name="tel" id=""
+                        onkeyup="this.setAttribute('value', this.value);" required="" value="">
+                      <span class="answer__title-contact">+7 (777) 777-77-77</span>
+                    </label>
+                    <label class="answer__label-contacts">
+                      <input class="answer__input-contacts" type="email" name="email" id=""
+                        onkeyup="this.setAttribute('value', this.value);" required="" value="">
+                      <span class="answer__title-contact">E-mail</span>
+                    </label>
+                    <p class="answer__title-file">Фото или план объекта (если имеется)</p>
+                    <label class="answer__label-file">
+                      <input class="answer__input-file" type="file" name="file" id="" value="">
+                      <span class="answer__input-file-text">прикрепить файл</span>
+                    </label>
+                  </div>
+                </div>
+                <button class="brief__btn quiz__btn-send">отправить бриф</button>
+              </form>
+              <div class="quiz__btn-wrap">
+                <button class="brief__btn quiz__btn-prev">предыдущий шаг</button>
+                <button class="brief__btn quiz__btn-next">следующий шаг</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="our-projects">
       <div class="container-new">
         <div class="section__inner">
