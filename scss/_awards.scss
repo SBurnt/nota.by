@@ -1,4 +1,12 @@
 .brief .awards {
+  position: static;
+
+  padding-top: 0;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 0;
+  }
+
   @media (max-width: 425px) {
     position: static;
 
@@ -111,7 +119,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
 
@@ -174,7 +182,7 @@
   }
 }
 
-body[data-theme="night"] .brief .awards {
+body[data-theme='night'] .brief .awards {
   .awards__title,
   .awards__motto {
     color: $night-theme;

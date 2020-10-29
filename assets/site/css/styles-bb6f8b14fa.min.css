@@ -30129,8 +30129,12 @@ body[data-theme='night'] .services__header-content a {
 }
 .portfolio-grid .portfolio-item .main-page__favorite-project-info footer,
 .project__similar-swiper .main-page__favorite-project-info footer {
-  margin-top: auto;
+  margin-top: 0;
 }
+/* .portfolio-grid .portfolio-item .main-page__favorite-project-info footer {
+  margin-top: 0;
+} */
+
 .portfolio-grid .main-page__favorite-project .img-wrapper {
   height: 200px;
 }
