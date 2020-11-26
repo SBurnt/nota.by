@@ -35,6 +35,16 @@
       margin-bottom: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    .feedback__cost.section__title br {
+      display: none;
+    }
+
+    .feedback__cost.section__title .feedback__cost__link {
+      display: inline;
+    }
+  }
 }
 
 body[data-theme='night'] .brief .feedback {

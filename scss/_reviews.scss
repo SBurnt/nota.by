@@ -23,7 +23,7 @@
     @media (max-width: 768px) {
       top: initial;
       right: initial;
-      bottom: 20px;
+      bottom: 0;
       left: 50%;
 
       transform: translateX(-50%);
@@ -99,6 +99,8 @@
 
     border-radius: 50%;
 
+    object-fit: cover;
+
     @media (max-width: 768px) {
       width: 70px;
       height: 70px;
@@ -143,7 +145,7 @@ body[data-theme='night'] .brief .reviews {
 
   .reviews__card-text-wrap {
     background: $dark2;
-    box-shadow: 20px 20px 0 0 #121212;
     border-color: $dark2;
+    box-shadow: 20px 20px 0 0 #121212;
   }
 }

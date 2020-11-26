@@ -13,9 +13,21 @@ $(document).ready(function () {
   const sliderAbout = document.querySelector('.js-about-slider');
   let swiper = new Swiper(sliderAbout, {
     loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: '.swiper-button-next.slider__arrows-next',
       prevEl: '.swiper-button-prev.slider__arrows-prev',
+    },
+    on: {
+      transitionEnd: function () {
+        let section_header = $('.js-about-slider div.swiper-slide-active').data('section_header');
+        let section_title = $('.js-about-slider div.swiper-slide-active').data('section_title');
+        $('.about__info .section__title').html(section_header);
+        $('.about__info .section__subtitle').html(section_title);
+      },
     },
   });
 
@@ -48,6 +60,7 @@ $(document).ready(function () {
   let swiper3 = new Swiper(sliderReviews, {
     slidesPerView: 2,
     spaceBetween: 20,
+    autoHeight: true,
     // centeredSlides: true,
     loop: true,
     navigation: {
@@ -121,12 +134,30 @@ $(document).ready(function () {
   });
   // появление инфомации о человеке секции наша команда на странице brief END
 
+  // прохождение квиза START
   if ($('.tabs__item').length) {
-    servicesTenTabs();
+    quiz();
   }
 
-  // прохождение квиза START
-  function servicesTenTabs() {
+  function discount_num() {
+    var percent = 0;
+    $('.tabs__list .tabs__item').each(function (index, element) {
+      var is_active = $(this).hasClass('active');
+      var tab_persent = $(this).data('percent');
+      percent += parseInt(tab_persent, 10);
+
+      if (is_active) return false;
+    });
+    $('.discount__num').html(percent);
+    let project_task = $('input[name="project-task"]:checked').val();
+    if (project_task === 'Для жизни' && percent > 0) {
+      $('div.discount').show();
+    } else {
+      $('div.discount').hide();
+    }
+  }
+
+  function quiz() {
     $('.tabs__item').on('click', function () {
       var attrID = $(this).find('div.tabs__text').attr('data-tab');
 
@@ -139,10 +170,12 @@ $(document).ready(function () {
         .addClass('active');
 
       if (attrID == 'tab4') {
-        $('.quiz__btn-wrap').css('display', 'none');
+        $('.quiz__btn-next').css('display', 'none');
+        $('.quiz__btn-prev').addClass('last-question');
         $('.quiz__btn-send').css('display', 'inline-block');
       } else {
-        $('.quiz__btn-wrap').css('display', 'block');
+        $('.quiz__btn-next').css('display', 'inline-block');
+        $('.quiz__btn-prev').removeClass('last-question');
         $('.quiz__btn-send').css('display', 'none');
       }
 
@@ -153,6 +186,7 @@ $(document).ready(function () {
       }
 
       $(this).addClass('question__answered');
+      discount_num();
     });
 
     $('.quiz__btn-next').on('click', function () {
@@ -164,6 +198,7 @@ $(document).ready(function () {
       } else {
         $(tabs[currentIndex + 1]).trigger('click');
       }
+      discount_num();
     });
 
     $('.quiz__btn-prev').on('click', function () {
@@ -174,6 +209,17 @@ $(document).ready(function () {
         $(tabs[$tabs.length - 1]).trigger('click');
       } else {
         $(tabs[currentIndex - 1]).trigger('click');
+      }
+      discount_num();
+    });
+
+    $(document).on('change', '.answer__input-file', function () {
+      var file = $(this);
+      var filename = file.val().replace(/.*\\/, '');
+      defaultValue = 'прикрепить файл';
+      file.next('.answer__input-file-text').addClass('filled-name').text(filename);
+      if (file.val() == '') {
+        file.next('.answer__input-file-text').removeClass('filled-name').text(defaultValue);
       }
     });
   }

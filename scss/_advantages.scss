@@ -36,7 +36,7 @@
     margin-bottom: 80px;
 
     @media (max-width: 1024px) {
-      margin-bottom: 50px;
+      margin-bottom: 0px;
     }
   }
 
@@ -56,6 +56,7 @@
     @media (max-width: 1024px) {
       width: 100%;
       min-height: 155px;
+      margin-bottom: 20px;
 
       &:nth-child(n + 4) {
         display: none;
@@ -190,6 +191,7 @@ body[data-theme='night'] .brief .advantages {
     background: #1f2022;
   }
 
+  .advantages__btn-more,
   .advantages__btn {
     color: $dark2;
 
